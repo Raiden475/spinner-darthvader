@@ -1,0 +1,73 @@
+/* Estilo para centrar los elementos en la pantalla */
+body {
+    background-color: #0d0d0d; /* Fondo negro oscuro */
+    color: #ffffff; /* Texto blanco */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column; /* Alineación vertical */
+}
+
+/* Contenedor para el botón y el spinner */
+.container {
+    display: flex;
+    flex-direction: column; /* Alineación vertical */
+    align-items: center; /* Centrando los elementos horizontalmente */
+    gap: 20px; /* Espacio entre el botón y el spinner */
+}
+
+/* Estilo para la carta de corazón negro como spinner */
+.spinner {
+    width: 180px;  /* Tamaño del spinner */
+    height: 180px; /* Tamaño del spinner */
+    background-image: url('../assets/black-heart-card.png'); /* Ruta a la imagen del spinner */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: spin 6s linear infinite; /* Velocidad de giro más lenta */
+    display: none; /* Oculto por defecto */
+}
+
+/* Estilo del botón */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #d90000; /* Rojo imperial */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b30000; /* Rojo más oscuro al pasar el ratón */
+}
+
+/* Estilo del footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #1a1a1a;  /* Fondo oscuro */
+    color: white;  /* Texto blanco */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Animación para girar el spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Clase para ocultar el botón cuando el spinner está girando */
+.hidden {
+    display: none;
+}
+
